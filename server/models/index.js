@@ -14,9 +14,10 @@ module.exports = {
         });
       });
     }, // a function which produces all the messages
-    post: function (username, text = '', roomname) {
+    post: function (username, text, roomname) {
+      //if (text === undefined) text = 'hello';
       console.log('username '+username, 'text '+text, 'roomname '+roomname);
-      db.connection.query(`insert into messages values (null, (select id from users where username = '${username}'), '${text}', (select id from rooms where name = '${roomname}'));`);
+      db.connection.query(`insert into messages values (null, (select id from users where username = '${username}'), "${text}", (select id from rooms where name = '${roomname}'));`);
       return;
     } // a function which can be used to insert a message into the database
   },

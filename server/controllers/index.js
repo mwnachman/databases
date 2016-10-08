@@ -23,7 +23,7 @@ module.exports = {
         res.end();
 
       });*/
-      models.messages.post(req.body.username, req.body.text, req.body.roomname);
+      models.messages.post(req.body.username, req.body.message, req.body.roomname);
       res.end();
       //models.message.post(usernme, text, roomname)
     } // a function which handles posting a message to the database

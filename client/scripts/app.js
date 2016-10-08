@@ -65,9 +65,10 @@ var app = {
       success: function(data) {
         // Don't bother if we have nothing to work with
         if (!data.results || !data.results.length) { return; }
-
+        
         // Store messages for caching later
         app.messages = data.results;
+        //console.log(app.messages);
 
         // Get the last message
         var mostRecentMessage = data.results[data.results.length - 1];
