@@ -1,6 +1,6 @@
-CREATE DATABASE chat;
+CREATE DATABASE chat_test;
 
-USE chat;
+USE chat_test;
 
 CREATE TABLE users (
   id int PRIMARY KEY AUTO_INCREMENT,
